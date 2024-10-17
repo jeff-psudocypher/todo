@@ -19,5 +19,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('addtask/',views.addtask,name='add')
+    path('addtask/',views.addtask,name='add'),
+    path('mark_as_done/<int:i>',views.mark_as_done,name='mark_done'),
+    path('mark_as_undone/<int:i>', views.mark_as_undone, name='mark_undone'),
+    path('edit/<int:i>', views.edit_task, name='edit'),
+    path('delete/<int:i>', views.delete_task, name='delete'),
+
 ]
